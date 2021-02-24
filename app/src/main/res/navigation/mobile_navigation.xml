@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.esthermorales.practica1.ui.cursos.CursosFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_cursos">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_detalle"
+            app:destination="@+id/nav_detalle" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_detalle"
+        android:name="com.esthermorales.practica1.ui.detail.CursosDetalleFragment"
+        android:label="@string/detalle_curso"
+        tools:layout="@layout/fragment_detalle">
+
+        <argument
+            android:name="numero_seminari"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>
